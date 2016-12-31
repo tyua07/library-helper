@@ -16,16 +16,16 @@ class EnvironmentLibraryTest extends TestCase
     // 根据对应的参数，获得当前的环境
     public function testGetEvnironment()
     {
-        var_dump(
-            EnvironmentLibrary::ENV_LOCAL |
-            EnvironmentLibrary::ENV_DEV |
-            EnvironmentLibrary::ENV_TEST|
-            EnvironmentLibrary::ENV_PRODUCT_TEST |
-            EnvironmentLibrary::ENV_PRODUCT
-        );die;
-
-
-        $envName = EnvironmentLibrary::getEvnironment(1 ^ 2);
-        echo $envName;
+//        var_dump(
+//            EnvironmentLibrary::ENV_LOCAL |
+//            EnvironmentLibrary::ENV_DEV |
+//            EnvironmentLibrary::ENV_TEST|
+//            EnvironmentLibrary::ENV_PRODUCT_TEST |
+//            EnvironmentLibrary::ENV_PRODUCT
+//        );die;
+//
+//
+//        $envName = EnvironmentLibrary::getEvnironment(1 ^ 2);
+//        echo $envName;
     }
 }

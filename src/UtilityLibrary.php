@@ -203,4 +203,27 @@ class UtilityLibrary
         }
         return false;
     }
+
+    /**
+     * 判断是否是手机号码
+     *
+     * @param $mobile
+     * @param null $pattern
+     * @return bool
+     */
+    public static function isMobile($mobile, $pattern  = null)
+    {
+        // 手机号码长度
+        $mobileLength = 11;
+
+        if ( !empty($mobile) && is_numeric($mobile) && strlen($mobile) == $mobileLength ) {
+            preg_match($pattern ? : '/^1[34578]{1}\d{9}$/', $mobile, $matches);
+
+            if ( static::isArray($matches) && !empty($matches[0]) && strlen($matches[0]) == $mobileLength ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

@@ -30,4 +30,17 @@ class UtilityLibraryTest extends TestCase
             $url = UtilityLibrary::mergeUrlProtocol($url, UtilityLibrary::URL_HTTPS);
         }
     }
+
+
+    public function testIsMobile()
+    {
+        $this->assertTrue(UtilityLibrary::isMobile('15897979797'));
+        $this->assertFalse(UtilityLibrary::isMobile('158979797971'));
+        $this->assertFalse(UtilityLibrary::isMobile('1589797979'));
+        $this->assertFalse(UtilityLibrary::isMobile('a1589797979'));
+        $this->assertFalse(UtilityLibrary::isMobile('11897979797'));
+        $this->assertFalse(UtilityLibrary::isMobile('12897979797'));
+        $this->assertFalse(UtilityLibrary::isMobile('16897979797'));
+        $this->assertFalse(UtilityLibrary::isMobile('19897979797'));
+    }
 }
